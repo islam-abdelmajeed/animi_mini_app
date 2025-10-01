@@ -15,7 +15,7 @@ class ShimmerItem extends StatelessWidget {
       width: width ?? double.infinity,
       height: height,
       child: Shimmer.fromColors(
-        baseColor: AppColors.grayE3E3E3,
+        baseColor: AppColors.primaryColor,
         highlightColor: Colors.white,
         child: Container(
           width: double.infinity,

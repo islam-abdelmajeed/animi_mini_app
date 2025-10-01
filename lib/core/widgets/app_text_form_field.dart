@@ -65,7 +65,7 @@ class AppTextFormField extends StatelessWidget {
       inputFormatters: inputFormatters,
       focusNode: focusNode,
       onChanged: onChanged,
-      style: Styles.text12Weight500Black.copyWith(color: Colors.black87),
+      style: Styles.text10Weight500White.copyWith(color: Colors.black87),
       validator: (value) {
         return validator(value);
       },
@@ -75,22 +75,21 @@ class AppTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         isDense: true,
         constraints: BoxConstraints(minHeight: 48.h),
-        contentPadding: contentPadding ??
-            EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
+        contentPadding: contentPadding ?? EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
         disabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: AppColors.grayE2EDF8, width: 1.3),
+          borderSide: const BorderSide(color: AppColors.primaryColor, width: 1.3),
           borderRadius: BorderRadius.circular(radius ?? 8.0),
         ),
-        focusedBorder: focusedBorder ??
+        focusedBorder:
+            focusedBorder ??
             OutlineInputBorder(
-              borderSide:
-                  const BorderSide(color: AppColors.grayE2EDF8, width: 1.3),
+              borderSide: const BorderSide(color: AppColors.primaryColor, width: 1.3),
               borderRadius: BorderRadius.circular(radius ?? 8.0),
             ),
-        enabledBorder: enabledBorder ??
+        enabledBorder:
+            enabledBorder ??
             OutlineInputBorder(
-              borderSide:
-                  const BorderSide(color: AppColors.grayE2EDF8, width: 1.3),
+              borderSide: const BorderSide(color: AppColors.primaryColor, width: 1.3),
               borderRadius: BorderRadius.circular(radius ?? 8.0),
             ),
         errorBorder: OutlineInputBorder(
@@ -101,19 +100,12 @@ class AppTextFormField extends StatelessWidget {
           borderSide: const BorderSide(color: Colors.red, width: 1.3),
           borderRadius: BorderRadius.circular(radius ?? 8.0),
         ),
-        hintStyle: hintStyle ?? Styles.text12Weight400Black,
+        hintStyle: hintStyle ?? Styles.text10Weight500White,
         hintText: hintText,
         suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
-        fillColor: isDisable == true
-            ? AppColors.grayE2EDF8
-            : backgroundColor ?? Colors.white,
-        errorStyle: TextStyle(
-          color: Colors.red,
-          fontSize: 10.sp,
-          fontWeight: FontWeight.w400,
-          height: 2,
-        ),
+        fillColor: isDisable == true ? AppColors.primaryColor : backgroundColor ?? Colors.white,
+        errorStyle: TextStyle(color: Colors.red, fontSize: 10.sp, fontWeight: FontWeight.w400, height: 2),
         filled: true,
       ),
       obscureText: isObscureText ?? false,
